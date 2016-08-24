@@ -1,0 +1,67 @@
+#Header {
+	border-bottom: 1px solid #ECF0F1;
+    padding: 46px 0;
+}
+#OctoLogo {
+	display: block;
+    float: left;
+    margin-right: 50px;
+}
+
+/* Top menu */
+#TopMenuNav {
+}
+
+#TopMenuNav button {
+    background: #ddd;
+}
+
+#TopMenuNav .icon-bar {
+    background: #888;
+}
+
+#TopMenu {
+    width: 100%;
+}
+
+#TopMenu>div {
+    display: table;
+    float: left;
+}
+
+#TopMenu>div>div {
+    display: table-cell;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#TopMenu a {
+    font-size: 15px;
+    color: #213F50;
+    text-decoration: none;
+}
+#TopMenu a.active {
+	color: #db6a26;
+}
+#TopMenu a:hover {
+	text-decoration: none;
+    color: #5783ff;
+}
+
+
+@media (max-width: 768px) {
+    #TopMenu>div>div {
+        display: block;
+        white-space: nowrap;
+        text-align: center;
+    }
+    #TopMenu>div {
+    	width: 100%;
+    }
+    #TopMenu>div>div:hover {
+        background: #75b353;
+    }
+}
+
+

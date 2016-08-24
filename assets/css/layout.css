@@ -1,0 +1,122 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+    font-family: 'Exo 2';
+    font-size: 16px;
+    color: #606060;
+}
+
+ Transition effects for base blocks 
+body>div,
+body>div>div
+{
+    transition: 1s;
+    -moz-transition: 1s;
+    -ms-transform: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+}
+.hh1 {
+    font-size: 34px;
+    font-family: 'Roboto medium';
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    background: #252525;
+}
+
+/* Modal */
+#ModalWin .modal-dialog {
+    width: 1000px;
+}
+#ModalWin .modal-content {
+    border-radius: 0;
+}
+#ModalWin .modalTitle {
+    padding: 10px 20px;
+    background: #00a8e9;
+    color: #fff;
+}
+#ModalWin .close {
+    display: block;
+    font-size: 21px;
+    color: #ccc;
+    background: rgba(255, 255, 255, 0.33);
+    width: 50px;
+    height: 44px;
+    opacity: 1;
+    text-shadow: none;
+    margin-top: -7px;
+    margin-right: -17px;
+    transition: .1s;
+}
+#ModalWin .close:hover {
+    background: #da4040;
+    color: #fff;
+}
+#ModalWin .modalWrapper {
+    padding: 20px;
+}
+@media (max-width: 1000px) {
+    #ModalWin .modal-dialog {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* SystemMessages */
+#SystemMessagesWrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    z-index: 10000;
+}
+#SystemMessages {
+    max-width: 600px;
+    margin: 0 auto;
+}
+#SystemMessages>div {
+    display: none;
+    border-radius: 5px;
+    padding: 11px 18px;
+}
+#SystemMessages .error {
+    background: rgba(255, 0, 0, 0.85);
+    border: 2px solid #000;
+    border-color: #a51a1a;
+    color: #fff;
+}
+#SystemMessages .message {
+    background: rgba(0, 213, 26, 0.85);
+    border: 2px solid #000;
+    border-color: #18be2d;
+    color: #fff;
+}
+#SystemMessages .hiddenMessage {
+    display: none;
+}
+#SystemMessages .messageBig {
+    font-size: 25px;
+    text-align: center;
+    padding: 74px 20px;
+    background: rgba(87, 174, 234, 0.94);
+    color: #fff;
+    border: 2px solid #000;
+    border-color: rgb(60, 147, 206);
+    margin-bottom: 20%;
+}

@@ -1,0 +1,57 @@
+description = "Основной шаблон"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link href="/themes/ion/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/fonts.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/layout.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/helpers.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/ui.css" rel="stylesheet">
+        <link href="/themes/ion/assets/css/overlay.css" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+    	<div id="SystemMessagesWrapper">
+    		<div id="SystemMessages">
+    			{{ message|raw }}
+    		</div>
+    	</div>
+    	
+        {% partial 'template/header' %}
+        
+        <!-- Content -->
+        <div id="WorkSpace">
+            {% page %}
+        </div>
+        
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="ModalWin" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+          </div>
+        </div>
+        
+        {% partial "template/footer" %}
+        
+        <!-- Scripts -->
+        <script src="{{ [
+            'assets/js/jquery-1.11.3.min.js',
+            'assets/js/bootstrap.min.js',
+            'assets/js/ion.js',
+            'assets/js/inputmask.js',
+            'assets/js/jquery.inputmask.js',
+            'assets/js/tempateScripts.js'
+        ]|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

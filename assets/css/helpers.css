@@ -1,0 +1,28 @@
+/* Helpers */
+
+.nopadding {
+    padding: 0 !important;
+}
+.bigText {
+    font-size: 30px!important;
+}
+.center {
+    text-align: center;
+}
+.textRight {
+    text-align: right;
+}
+.floatRight {
+    float: right;
+}
+
+/* no outline */
+.noOutline {
+    outline: none;
+}
+.noOutline:active {
+    outline: none;
+}
+.noOutline:focus {
+    outline: none;
+}
