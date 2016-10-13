@@ -1,5 +1,18 @@
 description = "Основной шаблон"
 ==
+<?php
+# Данный шаблон реагирует на ajax-запросы
+# Если нужно отобразить только контент, то в запрос нужно подмешать post ajax=true
+
+function onStart()
+{
+	if(post('ajax')==true){
+		$this['ajax'] = 'ajax';
+	}
+}
+?>
+==
+{% if(ajax)!=true %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +22,7 @@ description = "Основной шаблон"
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
+		<link rel="shortcut icon" href="/themes/ion/assets/images/favicon.ico">
         <link href="/themes/ion/assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="/themes/ion/assets/css/font-awesome.min.css" rel="stylesheet">
         <link href="/themes/ion/assets/css/fonts.css" rel="stylesheet">
@@ -17,21 +31,27 @@ description = "Основной шаблон"
         <link href="/themes/ion/assets/css/ui.css" rel="stylesheet">
         <link href="/themes/ion/assets/css/overlay.css" rel="stylesheet">
         {% styles %}
-    </head>
-    <body>
+	</head>
+	<body>
+		
+		<!-- System messages -->
     	<div id="SystemMessagesWrapper">
     		<div id="SystemMessages">
     			{{ message|raw }}
     		</div>
     	</div>
     	
-        {% partial 'template/header' %}
-        
+    	<!-- Header -->
+	    {# partial 'template/header' #}
+
         <!-- Content -->
-        <div id="WorkSpace">
-            {% page %}
-        </div>
+        <div id="WorkSpace" class="container">
+{% endif %}
+
+        {% page %}
         
+{% if(ajax)!=true %}
+        </div>
         <!-- Bootstrap Modal -->
         <div class="modal fade" id="ModalWin" tabindex="-1">
           <div class="modal-dialog">
@@ -40,7 +60,8 @@ description = "Основной шаблон"
           </div>
         </div>
         
-        {% partial "template/footer" %}
+        <!-- Footer -->
+        {# partial "template/footer" #}
         
         <!-- Scripts -->
         <script src="{{ [
@@ -55,3 +76,4 @@ description = "Основной шаблон"
         {% scripts %}
     </body>
 </html>
+{% endif %}
