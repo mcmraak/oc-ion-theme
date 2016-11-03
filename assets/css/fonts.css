@@ -1,17 +1,5 @@
 /* FONTS CONNECTOR */
 
-/* @font-face {
-    font-family: 'Roboto regular';
-    src: url('/themes/ion/assets/fonts/RobotoRegular.eot');
-    src: url('/themes/ion/assets/fonts/RobotoRegular.eot') format('embedded-opentype'), url('/themes/ion/assets/fonts/RobotoRegular.woff') format('woff'), url('/themes/ion/assets/fonts/RobotoRegular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto medium';
-    src: url('/themes/ion/assets/fonts/RobotoMedium.eot');
-    src: url('/themes/ion/assets/fonts/RobotoMedium.eot') format('embedded-opentype'), url('/themes/ion/assets/fonts/RobotoMedium.woff') format('woff'), url('/themes/ion/assets/fonts/RobotoMedium.ttf') format('truetype');
-} */
-
 @font-face {
   font-family: 'Exo 2';
   font-style: normal;

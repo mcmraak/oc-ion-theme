@@ -11,8 +11,8 @@ body {
     color: #606060;
 }
 
- Transition effects for base blocks 
-body>div,
+/* Transition effects for base blocks */
+/*body>div,
 body>div>div
 {
     transition: 1s;
@@ -20,14 +20,7 @@ body>div>div
     -ms-transform: 1s;
     -webkit-transition: 1s;
     -o-transition: 1s;
-}
-.hh1 {
-    font-size: 34px;
-    font-family: 'Roboto medium';
-    color: #000;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
+}*/
 
 footer {
     position: absolute;
@@ -38,7 +31,7 @@ footer {
     background: #252525;
 }
 
-/* Modal */
+/* Modal for ion*/
 #ModalWin .modal-dialog {
     width: 1000px;
 }
@@ -78,7 +71,7 @@ footer {
     }
 }
 
-/* SystemMessages */
+/* SystemMessages for ion */
 #SystemMessagesWrapper {
     position: fixed;
     left: 0;
